@@ -1,0 +1,311 @@
+1
+MCZA018 – Processamento Digital de Imagens
+ESPECIFICAÇÃO e INSTRUÇÕES do TRABALHO 
+Q1.2026
+1.
+Objetivos
+- Realizar o trabalho em equipe de 3 (três) alunos.
+-  O  tema  do  trabalho  poderá  ser  baseado  no  levantamento  de  problemas  reais  em 
+entrevistas empáticas com pessoas externas.
+-  Cada  equipe  deverá  propor  solucionar  um  ou  mais  desses  problemas  levantados, 
+definindo o  cenário de aplicação e o tema do trabalho.
+- O projeto deve ir além da simples aplicação de filtros; deverá resolver um problema de 
+extração de informação, utilizando segmentação como o Watershed e os outros tópicos da 
+ementa.
+Objetivos específicos:
+ 1) Aplicar conceitos aprendidos na disciplina de processamento de vídeo.
+ 2)  Desenvolver  um  “Sistema  de  Processamento  Visual  de  Imagens”  para  aplicação 
+interativa, que execute captura de vídeo em tempo real, mostrando resultado numa tela.
+ 3)  Elaborar  um  procedimento  para  executar  o  “Sistema”  na  forma  de  laboratório 
+experimental.
+2.
+Introdução
+O Trabalho da disciplina consistirá de um Sistema de Processamento Visual. Este 
+sistema deverá ser desenvolvido em linguagem Python com a API OpenCV, para execução 
+no ambiente Jupyter Notebook.
+Esta especificação a seguir apresenta as metas e os requisitos do trabalho, bem 
+como as instruções e regras das atividades.
+(A) O trabalho deverá propor um Contexto e Cenário de Aplicação (CA) original, baseado 
+totalmente em entrevistas empáticas com o público externo.
+(B) O objetivo de projeto do sistema será abordar o processamento visual, para  realizar 
+a análise de cenas visuais para obtenção de informações,  voltado para a solução de 
+problemas de forma original e criativa, ou propor uma abordagem didática para atividade 
+de ensino.
+(C) O trabalho deverá implementar e aplicar todos conceitos de processamento digital de 
+imagens desta disciplina. 
+(D) Os próprios alunos deverão realizar todas atividades do trabalho e do desenvolvimento 
+indicadas. Ou seja, não só o trabalho final, mas também o processo e a evolução serão 
+avaliados.  No  Seminário  de  Disciplina  é  imprescindível  a  apresentação  de  todos 
+membros da equipe de trabalho.
+(E) Nos slides do Seminário deverá conter um logotipo da UFABC.
+https://www.ufabc.edu.br/administracao/aci/programacao-visual/manual-de-identidade-visual-
+da-ufabc
+(F) Os  seguintes  conceitos  da  disciplina  devem  ser  abordados  no  trabalho,  na 
+implementação do programa:
+\n===PAGE===\n2
+i. Obrigatórios
+
+Filtragem de imagens
+
+Processamento de cores
+
+Histograma e/ou Equalização
+
+Operadores Morfológicos
+ii. Pelo menos um item
+
+Segmentação
+
+Watershed
+(G) A “Aplicação” desenvolvida no projeto deverá permitir alguma medida ou métrica de 
+desempenho,  tais  como  o  resultado  de  qualidade  visual  objetivo  (p.ex.PSNR  ou 
+subjetivo  (opinião  subjetiva),  acurácia  de  acertos,  obtenção  de  informações  etc.  A 
+influência da iluminação da cena também poderá ser analisada.
+(H) O trabalho do projeto deverá permitir a geração de arquivos de vídeo.
+Pre-
+processamento
+Processamento 
+de
+Vídeo
+webcam
+Gerar formatos de vídeo
+Arquivo de 
+vídeo
+(I) O trabalho do projeto deverá permitir o processamento de vídeo em arquivos de vídeo 
+recebidos de terceiros.
+Pre-
+processamento
+Processamento 
+de
+Vídeo
+Vídeo 
+recebido
+Gerar novos formatos de vídeo
+Arquivo de 
+vídeo
+\n===PAGE===\n3
+DOCUMENTAÇÃO:
+As entregas das partes deverão ser elaboradas em formato jupyter notebook .ipynb 
+pelo MOODLE, e também numa pasta pessoal do github (enviar o link). A apresentação no 
+seminário poderá ser feito em formato de apresentação pptx.
+Atenção, todos os documentos deverão constar o Nome da Equipe, Nome Completo 
+de todos Integrantes, Data de Publicação, e o Título do Trabalho.
+3. Elaboração do Contexto e Cenário de Aplicação (CA)
+++++++++++ TEMA DO TRABALHO ++++++++++ 
+As equipes deverão apresentar temas de trabalho distintos entre si, não serão aceitos 
+temas  iguais  ou  similares;  nem  similares  a  trabalhos  de  anos  anteriores.  Temas 
+interdisciplinares são incentivados e os mais encorajados para o trabalho. O tema do 
+trabalho a ser desenvolvido poderá ser baseado em Entrevistas Empáticas. 
+Com todos membros da equipe, cada um poderá entrevistar as pessoas de forma 
+presencial, a respeito de demandas específicas/importante para elas, de análise de cenas 
+visuais ou de  processamento visual. com uso de camera(s) ou de imagem(ns) - para 
+aplicação ao público, ou educacional, ou de empresa comercial ou industrial. Em geral as 
+entrevistas  serão  fora  da  UFABC,  mas  podendo  ser  de  forma  remota  também  por 
+videochamada.
+Na documentação, apresentar estas entrevistas de forma comprovada com fotos etc, 
+fazer um resumo com a Identificação (nome, idade, profissão, relação com o entrevistador) 
+de cada entrevistado.
+Entrevistas Empáticas poderá ter como público-alvo:
+(1) Entrevistas com pessoas externas: Entrevistar pessoa externa – maior de idade, 
+sem nenhum tipo de vinculo com a UFABC, nem do meio acadêmico ou científico. Portanto, 
+exclui-se alunos de graduação ou pos-graduação, docentes universitários, e membros de 
+institutos de pesquisa.
+(2)  Entrevistas  com  docentes  internos  ou  externos,  visando  sistemas  para  fins 
+didáticos inovadores com uso de câmera(s) e imagem(ns):  Entrevistar docentes, interno da 
+UFABC, ou docente externo do ensino fundamental / ensino médio. Neste caso, a finalidade 
+da entrevista seria entender a demanda de ferramentas didáticas para a explicação e 
+comunicação visual de fenômenos ou de resultados. 
+Atenção: Para este caso de ferramenta didática, o tema não poderá abordar qualquer 
+teoria  sobre  o  processamento  de  imagens  e  de  vídeo,  computação  gráfica,  visão 
+computacional, e afins. Além disso, os docentes da UFABC a serem entrevistados não 
+poderão  ser  integrantes  dos  cursos  de  Eng.  de  Informação,  Eng.  IAR,  Ciencia  da 
+Computação, ou da área de imagens da Eng. Biomédica.
+Após a realização de todas entrevistas empáticas, cada equipe poderá realizar o 
+processo de decisão do tema, relatando o processo de decisão da aplicação do trabalho 
+através de justificativas. Nesse caso, nas justificativas deverão constar referências como 
+pesquisa de produtos similares, ou pesquisa de mercado, ou de artigos tecnicos sobre o 
+tema.
+++++++++++ CONTEXTO E CENÁRIO DE APLICAÇÃO ++++++++++ 
+Cada equipe deverá propor um contexto e cenário de aplicação sobre o tema do 
+trabalho, documentando esta proposta na pagina de documentação da equipe.  Assim, 
+neste Contexto e Cenário de Aplicação do trabalho deverá apresentar de forma geral: 
+\n===PAGE===\n4
+
+O problema a ser abordado, seu contexto, e sua justificativa e motivação.
+
+O objetivo do sistema, o que será o resultado final para o usuário leigo.
+
+Como se usa o sistema. (Qual o tipo de interatividade do usuário)
+
+Qual o benefício do sistema ao usuário?
+4. Desenvolvimento do Sistema de Processamento Visual (SPV)
+A implementação do sistema SPV deverá atender às seguintes condições:
+
+O programa deverá ser feito em linguagem Python e utilizar a API OpenCV.
+
+Deverá ser executado no laboratório didático e utilizar a webcam do mesmo 
+laboratório.
+
+Deverá ser feito pelos próprios alunos de cada equipe, não sendo permitido 
+utilização de trabalhos feitos por outras pessoas nem de ferramentas de IA.
+
+O programa poderá utilizar bibliotecas de processamento visual, desde que 
+tenham reconhecimento notório e estejam disponíveis para utilização pública e 
+gratuita. 
+
+O  programa  deverá  realizar  cálculos  “on-the-fly”  da  teoria  abordada  ou  do 
+modelo matemático adotado, para apresentar a visualização do video ou da 
+imagem.
+
+Importante:
+ 
+  em todos os arquivos de código deverá ser feito um cabeçalho (com 
+comentários) colocando o nome completo, RA, data do programa, nome do 
+programa, e exemplo de chamada do programa no prompt do Linux. 
+
+Além  disso,  no  TÍTULO  das  janelas  que  o  programa  irá  gerar  na  tela  do 
+computador, coloque o título do programa e o NOME DA EQUIPE.
+
+O sistema SPV desenvolvido deverá atender todas as demandas e necessidades 
+previstas pelo Contexto e Cenário de Aplicação (CA).
+
+O  sistema  SPV  deverá  permitir  que  usuários  (leigos)  possam  executar  o 
+programa  e  visualizar  e  coletar  os  resultados  obtidos  pela  execução  da(s) 
+tarefa(s) do SPV.
+5. Elaboração do Laboratorio Experimental do SPV (Lex)
+A elaboração do Laboratorio Experimental do SPV (Lex) tem o objtivo de utilizar o 
+Sistema de Processamento Visual em experimentos práticos e didáticos, devendo atender 
+às seguintes condições:
+
+A equipe deverá preparar casos de aplicação do SPV, para sua execução em 
+tempo real com a webcam, por um usuário leigo, p. ex. as pessoas externas e as 
+pessoas entrevistadas. 
+
+Considerar essas aplicações como sendo experimentos didáticos de aula de 
+laboratório.
+
+Roteiro do Laboratorio Experimental: Para cada aplicação deverá elaborar um 
+roteiro de procedimento experimental com instruções claras e detalhadas para o 
+usuário executar o sistema e coletar resultados. O roteiro pode conter figuras, 
+imagens que esclareçam o procedimento e o tipo de resultados esperados.
+
+Introdução (no roteiro): Explicação do funcionamento do sistema, através de 
+suas telas e interfaces de entrada/saída; ou seja como um usuário leigo poderá 
+operar o sistema.
+\n===PAGE===\n5
+
+Procedimento experimental: elaborar com instruções claras e detalhadas para o 
+usuário executar o sistema e coletar resultados O roteiro pode conter figuras, 
+imagens que esclareçam o procedimento e o tipo de resultados esperados.
+
+Questionário: a equipe deverá elaborar um questionário, consistindo de conjunto 
+de questões e perguntas para o usuário responder em relação aos experimentos 
+realizados, de modo a avaliar se o usuário: (i) entendeu o assunto do tema 
+através  do  experimento;  (ii)  obteve  resultados  esperados;  (iii)  entendeu  a 
+aplicação do sistema. 
+
+Enquete Subjetiva de Opinião para o usuário que realizou o experimento, com 
+perguntas sobre a sua opinião em relação ao Sistema. Deverá ter dois tipos de 
+perguntas: (a) com respostas escritas; e (b) com respostas em escala 1~5. Uma 
+análise desta enquete deverá constar no relatório final do trabalho, juntamente 
+com a análise das notas alcançadas no teste de campo.
+
+Filmar um video mostrando a execução do sistema SPV desenvolvido – durante 
+os experimentos previstos, com um usuário externo à equipe – desde que o 
+mesmo informe o seu consentimento de filmagem.
+6. Parte 7: Elaboração do Relatório Final do Trabalho (RFT)
+O relatório final do trabalho deverá ser composto dos seguintes capítulos:
+
+Introdução: deverá conter os objetivos do trabalho;
+■
+Cenário de Aplicação (CA)
+ 
+ 
+■
+Fundamentação teórica
+ 
+ 
+
+Materiais e métodos: 
+■
+Diagrama de Blocos Funcional do SPV
+ 
+ 
+■
+Descrição da implementação do  Sistema de Processamento da Visual (SPV)
+ 
+ 
+■
+Lista dos arquivos: dos código-fonte, imagens, vídeos, e arquivos auxiliares.
+ 
+ 
+■
+Escrever uma análise técnica:
+ 
+  sobre o grau de atendimento do sistema 
+desenvolvido em relação ao contexto/cenário escolhido: 
+
+apresentar medidas ou métricas objetivas (numéricas) e/ou qualitativas, 
+resultantes do desempenho; análise e conclusões. 
+
+
+Laboratorio Experimental:
+■
+Roteiro do Laboratório Experimental (LEx)
+ 
+ 
+■
+Análise dos Resultados Experimentais:
+ 
+  apresentar os resultados de forma 
+organizada,  listando  detalhadamente  os  experimentos  realizados  e  os 
+critérios de avaliação. Analisar também as opiniões subjetivas.
+
+Conclusões: Nesta seção a equipe deverá comentar se os objetivos propostos na 
+introdução e a modelagem do trabalho foram atingidos ou não, baseados nos 
+exemplos  apresentados.  Deverá  ainda  comentar  sobre  os  pontos  positivos  e 
+negativos e da implementação.
+
+Referências Bibliográficas
+
+Anexo: deverá apresentar os códigos e todos arquivos.
+Elaboração de Apresentação, Vídeos, e Demo final. (DEMO)
+A preparação do Semináro é feita após o Relatório Final do Trabalho, e a equipe 
+deverá elaborar:
+\n===PAGE===\n6
+
+A  apresentação  em  slides  do  tipo  PPTx  sobre  o  trabalho.  Incluir  nesta 
+apresentação detalhes computacionais do Sistema, explicando como atendeu 
+aos requisitos solicitados quanto ao uso dos conceitos aprendidos da disciplina 
+de Processamento Digital de Imagens.
+
+Filmar um vídeo mostrando a execução do sistema SPV desenvolvido – que 
+pode ser obtido durante os experimentos.
+
+Preparar uma demonstração ao vivo do sistema SPV original operando com a 
+webcam, para ser apresentado no Seminário.
+7.
+Parte 8: Apresentação no Seminário da Disciplina (SEMINAR).
+a) No dia da apresentação do trabalho será sorteada a ORDEM DE APRESENTAÇÃO dos 
+trabalhos.
+b) As equipes sorteadas deverão apresentar os seus trabalhos não ultrapassando o tempo 
+estipulado para a apresentação.
+c) No início, cada equipe deverá apresentar os slides destacando as características do seu 
+SPV, e o desempenho obtido.
+d) Apresentar o vídeo filmado, e demonstrar o funcionamento do seu SPV.
+c) Após a apresentação e demonstração, o professor e o público poderá fazer perguntas 
+avaliativas aos alunos.
+d) O publico presente poderá fazer perguntas gerais aos alunos.
+e) As equipes poderão trazem convidados para assistirem o seminário. 
+8.
+Avaliação do trabalho
+Critério do trabalho final:
+
+- Documentação de relatório (ipynb) e dos slides (pptx), peso 40%
+
+- Criatividade e mérito da implementação, peso 35%
+
+- Apresentação e demonstração no seminário, peso 25%
+
+- (opcional) entrevistas empáticas iniciais, peso 5%
+\n===PAGE===\n
