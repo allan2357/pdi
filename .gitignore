@@ -152,19 +152,6 @@ conductor/
 Thumbs.db
 .DS_Store
 
-# Padrões de saída do OpenCV e Processamento de Imagens
-# Geralmente não queremos resultados binários pesados no Git
-*.avi
-*.mp4
-*.mkv
-*.mov
-*.wmv
-*.flv
-
-# Imagens de resultado (ajuste conforme seu padrão de nomeação)
-# resultado_*.jpg
-# resultado_*.png
-
 # Arquivos de backup e logs
 *.log
 *.bak
